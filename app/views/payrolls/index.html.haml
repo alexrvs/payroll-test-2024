@@ -4,9 +4,10 @@
   %ul
     - @payrolls.each do |payroll|
       %li
-        = payroll.starts_at.to_s(:short)
+        = l payroll.starts_at, format: :short
+
         &mdash;
-        = payroll.ends_at.to_s(:short)
+        = l payroll.ends_at, format: :short
         = link_to '[X]', payroll, method: :delete
 - else
   %p no payrolls
